@@ -1,0 +1,13 @@
+name: Aprendiendo Github Acions
+run-name: ¡Estoy aprendiendo Github-Actions!
+on: [push]
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "hello world"
+      - uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20
+      - run: node helloWorld.js
