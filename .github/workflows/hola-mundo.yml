@@ -1,5 +1,5 @@
-name: learning GitHub Actions
-run-name: I am learing GitHub Actions!
+name: Aprendiendo Github Actions
+run-name: Estoy aprendiendo Github Actions!!!
 on: [push]
 jobs:
   hola-mundo:
@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run helloWorld.js
+      - name: Correr script
         run: node helloWorld.js
