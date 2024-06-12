@@ -6,13 +6,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Run chek-main CI
-        uses: actions/checkout@v3
-      - run: echo "Desplegando en la rama ${{github.ref}}"
-  saludos-prueba:
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Run saludos-prueba CI        
         uses: actions/checkout@v3
-      - run: echo "Running ${{github.event_name}} only CI using ${{ env.NOMBRE }}"
+      - run: echo "Running ${{github.event_name}} only CI using ${{ env.NOMBRE }}. Desplegando en la rama ${{github.ref}}"
