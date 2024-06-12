@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Run saludos-prueba CI        
         uses: actions/checkout@v3
-      - run: echo "Running ${{github.event_name}} only CI using $NOMBRE. Desplegando en la rama ${{github.ref}}"
+      - run: echo "Running ${{github.event_name}} only CI using ${{vars.NOMBRE}}. Desplegando en la rama ${{github.ref}}"
