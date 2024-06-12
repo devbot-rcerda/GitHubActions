@@ -1,17 +1,10 @@
 name: Contexto
 run-name: ¡Estoy aprendiendo a usar Contextos!
 on: push
-env:
-  Name: 'Missael Cerda'
-  Age: 30
 jobs:
   check-main:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Desplegando en la rama ${{github.ref}}"
-  saludos-prueba:
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Running ${{github.event_name}} only CI using ${{ env.NOMBRE }}"
+  
